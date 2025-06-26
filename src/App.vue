@@ -1,9 +1,14 @@
 <script setup>
 import Calculateur from './components/Calculateur.vue';
+import CalcMemory from './components/CalcMemory.vue';
+import { ref } from 'vue';
+
+const memory = ref([1]);
 </script>
 
 <template>
-  <Calculateur />
+  <Calculateur @calculate="c => memory.push(c)"/>
+  <CalcMemory :memory />
 </template>
 
 <style scoped>

@@ -29,6 +29,8 @@ const c = ref();
 
 const operator = ref();
 
+const emit = defineEmits(['calculate'])
+
 const calculate = () => {
     switch(operator.value) {
         case "+": 
@@ -44,6 +46,8 @@ const calculate = () => {
             c.value = a.value / b.value;
             break;
     }
+
+    emit('calculate', c);
 }
 
 </script>
