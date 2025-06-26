@@ -8,6 +8,7 @@ const memory = ref([]);
 </script>
 
 <template>
+  <p>Cloned version</p>
   <IconSupport />
   <Calculateur @calculate="c => memory.push(c)"/>
   <CalcMemory :memory />
