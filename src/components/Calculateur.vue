@@ -1,9 +1,9 @@
 <template>
-    <Label>A</Label>
-    <input v-model="a"/>
+    <label>A</label>
+    <input v-model="a" type="number"/>
 
-    <Label>B</Label>
-    <input v-model="b"/>
+    <label>B</label>
+    <input v-model="b" type="number"/>
 
     <label>C</label>
     <p>{{ c }}</p>
@@ -32,16 +32,16 @@ const operator = ref();
 const calculate = () => {
     switch(operator.value) {
         case "+": 
-            c.value = a.value + b.value;
+            c.value = Number(a.value) + Number(b.value);
             break;
-        case "+": 
-            c.value = a.value - b.value;
+        case "-": 
+            c.value = Number(a.value) - Number(b.value);
             break;
         case "*":
-            c.value = a.value * b.value;
+            c.value = Number(a.value) * Number(b.value);
             break;
         case "/":
-            c.value = a.value / b.value;
+            c.value = Number(a.value) / Number(b.value);
             break;
     }
 }
