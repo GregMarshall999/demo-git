@@ -1,8 +1,8 @@
 <template>
-    <Label>A</Label>
+    <label>A</label>
     <input v-model="a"/>
 
-    <Label>B</Label>
+    <label>B</label>
     <input v-model="b"/>
 
     <label>C</label>
@@ -31,11 +31,11 @@ const operator = ref();
 
 const calculate = () => {
     switch(operator.value) {
-        case "+": 
-            c.value = a.value + b.value;
+        case "-": 
+            c.value = a.value - b.value;
             break;
         case "+": 
-            c.value = a.value - b.value;
+            c.value = a.value + b.value;
             break;
         case "*":
             c.value = a.value * b.value;
