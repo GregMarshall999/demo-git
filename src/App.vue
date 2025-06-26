@@ -3,7 +3,7 @@ import Calculateur from './components/Calculateur.vue';
 import CalcMemory from './components/CalcMemory.vue';
 import { ref } from 'vue';
 
-const memory = ref([1]);
+const memory = ref([]);
 </script>
 
 <template>
