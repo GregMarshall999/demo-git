@@ -1,9 +1,9 @@
 <template>
     <label>A</label>
-    <input v-model="a"/>
+    <input v-model="a" type="number"/>
 
     <label>B</label>
-    <input v-model="b"/>
+    <input v-model="b" type="number"/>
 
     <label>C</label>
     <p>{{ c }}</p>
@@ -33,17 +33,17 @@ const emit = defineEmits(['calculate'])
 
 const calculate = () => {
     switch(operator.value) {
-        case "-": 
-            c.value = a.value - b.value;
-            break;
         case "+": 
-            c.value = a.value + b.value;
+            c.value = Number(a.value) + Number(b.value);
+            break;
+        case "-": 
+            c.value = Number(a.value) - Number(b.value);
             break;
         case "*":
-            c.value = a.value * b.value;
+            c.value = Number(a.value) * Number(b.value);
             break;
         case "/":
-            c.value = a.value / b.value;
+            c.value = Number(a.value) / Number(b.value);
             break;
     }
 
