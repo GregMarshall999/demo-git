@@ -1,12 +1,14 @@
 <script setup>
 import Calculateur from './components/Calculateur.vue';
 import CalcMemory from './components/CalcMemory.vue';
+import IconSupport from './components/icons/IconSupport.vue';
 import { ref } from 'vue';
 
 const memory = ref([]);
 </script>
 
 <template>
+  <IconSupport />
   <Calculateur @calculate="c => memory.push(c)"/>
   <CalcMemory :memory />
 </template>
