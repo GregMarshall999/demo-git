@@ -9,6 +9,7 @@ const memory = ref([]);
 
 <template>
   <p>Cloned version 1.0.0</p>
+  <p>Test pull request</p>
   <IconSupport />
   <Calculateur @calculate="c => memory.push(c)"/>
   <CalcMemory :memory />
